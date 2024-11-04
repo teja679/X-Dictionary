@@ -11,10 +11,10 @@ function App() {
     const responseData = dictionary.find(item => item.word.toLowerCase() === inputValue.toLowerCase())
     if (responseData) {
       setResponse(responseData.meaning);
-      setInputValue('');
+      // setInputValue('');
     } else {
-      console.log('Search result not found.')
-      alert('Search result not found.')
+      setResponse("Word not found in the dictionary.");
+      // console.log('Word not found in the dictionary.')
     }
   }
   return (
